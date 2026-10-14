@@ -1,0 +1,211 @@
+
+/* ===== RESET & DASAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.app-container {
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.btn-back {
+    background-color: #1d63b8;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #134988;
+}
+
+/* ===== KONTEN TRACKING ===== */
+main {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.tracking-form,
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+#noDO {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 14px;
+    border: 1px solid #d5dce5;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+#noDO:focus {
+    border-color: #1d63b8;
+    box-shadow: 0 0 0 3px rgba(29, 99, 184, 0.12);
+}
+
+#cariBtn {
+    background-color: #1d63b8;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#cariBtn:hover {
+    background-color: #134988;
+}
+
+/* ===== HASIL TRACKING ===== */
+#hasilTracking {
+    display: none;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 4px solid #1d63b8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow-wrap: anywhere;
+}
+
+#hasilTracking h3 {
+    color: #0d3b66;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8edf2;
+}
+
+#hasilTracking div {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+#hasilTracking strong {
+    color: #0d3b66;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e5eaf0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #1d63b8;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+/* ===== RIWAYAT PERJALANAN ===== */
+#hasilTracking h4 {
+    color: #0d3b66;
+    margin: 18px 0 12px;
+}
+
+#hasilTracking ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#hasilTracking li {
+    position: relative;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f4f7fb;
+    border-left: 3px solid #1d63b8;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.9rem;
+}
+
+#hasilTracking hr {
+    border: none;
+    border-top: 1px solid #e8edf2;
+    margin: 20px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 20px;
+    }
+
+    .navbar h2 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .tracking-form,
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+    }
+
+    #noDO {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #cariBtn {
+        width: 100%;
+    }
+
+    #hasilTracking {
+        padding: 18px;
+    }
+}
