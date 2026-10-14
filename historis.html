@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histori Transaksi - SITTA UT</title>
+    <link rel="stylesheet" href="css/historis.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <h2>Histori Transaksi Bahan Ajar</h2>
+            <button class="btn-back" onclick="location.href='dashboard.html'">Dashboard</button>
+        </nav>
+        <div>
+            <table>
+                <thead><tr><th>Nomor DO</th><th>Nama Mahasiswa</th><th>Tanggal Kirim</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody id="historiBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/historis.js"></script>
+</body>
+</html>
