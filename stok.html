@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok - SITTA UT</title>
+    <link rel="stylesheet" href="css/stok.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <h2>Informasi Stok Bahan Ajar (BMP)</h2>
+            <button class="btn-back" onclick="location.href='dashboard.html'">Dashboard</button>
+        </nav>
+        <main>
+            <button id="tambahBarisBtn" class="btn-primary">Tambah Baris Stok Baru</button>
+            <div class="table-wrapper">
+                <table id="tabelStok">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Kode Lokasi</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stokBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!--Modal Tambah Stok-->
+    <div id="modalTambahStok" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Tambah Stok Baru</h3>
+            <input type="text" id="newKodeLokasi" placeholder="Kode Lokasi"><br>
+            <input type="text" id="newKodeBarang" placeholder="Kode Barang"><br>
+            <input type="text" id="newNamaBarang" placeholder="Nama Barang"><br>
+            <input type="text" id="newJenis" placeholder="Jenis (BMP)"><br>
+            <input type="number" id="newEdisi" placeholder="Edisi"><br>
+            <input type="number" id="newStok" placeholder="Stok"><br>
+            <input type="text" id="newCover" placeholder="URL Gambar (contoh; img/buku.jpg)"><br>
+            <button id="simpanStokBaru" class="btn-modal">Simpan</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/stok.js"></script>
+</body>
+</html>
