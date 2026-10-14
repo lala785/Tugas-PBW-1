@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking - SITTA UT</title>
+    <link rel="stylesheet" href="css/tracking.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <h2>Tracking Pengiriman</h2>
+            <button class="btn-back" onclick="location.href='dashboard.html'">Dashboard</button>
+        </nav>
+        <div class="tracking-box">
+            <input type="text" id="noDO" placeholder="Masukkan Nomor Delivery Order" class>
+            <button id="cariBtn" class="btn-primary">Cari</button>
+        </div>
+        <div id="hasilTracking" classs="tracking-result" style="display:none;"></div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+</html>
