@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - SITTA UT</title>
+    <link rel="stylesheet" href="css/laporan.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <h2>Laporan SITTA</h2>
+            <button class="btn-back" onclick="location.href='dashboard.html'">Dashboard</button>
+        </nav>
+        <div class="report-section" id="monitoring">
+            <h3>Monitoring Progress DO Bahan Ajar</h3>
+            <div class="table-wrapper">
+                <table id="tabelDO">
+                    <thead><tr><th>Nomor DO</th><th>Mahasiswa</th><th>Status</th><th>Progress</th></tr></thead>
+                    <tbody id="doBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="report-section" id="rekap">
+            <h3>Rekap Stok Bahan Ajar (per Kode Barang)</h3>
+            <div class="table-wrapper">
+                <table id="tabelRekap">
+                    <thead><tr><th>Kode Barang</th><th>Nama Barang</th><th>Total Stok</th></tr></thead>
+                    <tbody id="rekapBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/laporan.js"></script>
+</body>
+</html>
