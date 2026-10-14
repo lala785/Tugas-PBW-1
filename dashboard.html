@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SITTA UT</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!--Header dengan logo-->
+        <h2 class="logo">SITTA Bahan Ajar</h2>
+        <button id="logoutBtn" class="btn-logout">Logout</button>
+    </div>
+    
+    <!--Navigasi horizontal-->
+    <nav class="nav-horizontal">
+        <a href="stok.html" class="nav-item">Informasi Bahan Ajar</a>
+        <a href="tracking.html" class="nav-item">Lacak Pengiriman</a>
+        <div class="dropdown">
+            <button class="dropbtn">Laporan</button>
+            <div class="dropdown-content">
+                <a href="laporan.html#monitoring">Monitoring Progress DO Bahan Ajar</a>
+                <a href="laporan.html#rekap">Rekap Bahan Ajar</a>
+            </div>
+        </div>
+        <a href="historis.html" class="nav-item">Historis Transaksi Bahan Ajar</a>
+    </nav>
+
+    <!--Main content-->
+    <main class="dashboard-content">
+        <div class="greeting-area">
+            <h1>Dashboard Aplikasi SITTA</h1>
+            <p id="greeting" class="greeting-text"></p>
+        </div>
+        
+        <div class="monitoring-grid">
+        <!--Card Monitoring Progress DO-->
+            <div class="dashboard-card">
+                <h3>Monitoring Progress DO Bahan Ajar</h3>
+                <div class="table-wrapper">
+                    <table class="compact-table">
+                        <thead>
+                            <tr><th>Nomor DO</th><th>Mahasiswa</th><th>Status</th><th>Progress</th></tr>
+                        </thead>
+                        <tbody id="monitoringBody"></tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a href="laporan.html" class="link-more">Lihat Selengkapnya</a>
+                </div>
+            </div>
+
+            <!--Card rekap bahan ajar-->
+            <div class="dashboard-card">
+                <h3>Rekap Bahan Ajar</h3>
+                <div class="table-wrapper">
+                    <table class="compact-table">
+                        <thead>
+                            <tr><th>Kode Barang</th><th>Nama Barang</th><th>Stok</th></tr>
+                        </thead>
+                        <tbody id="rekapBody"></tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a href="stok.html" class="link-more">Kelola Stok</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
