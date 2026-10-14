@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITTA - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="login-body">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-card">
+                <img src="img/logo-ut.jpg" alt="logo-ut" height="100px" width="90"> 
+                <h1>SITTA - Universitas Terbuka</h1>
+                <p>Sistem Informasi Pemesanan Bahan Ajar</p>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="nama@ut.ac.id" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="Masukkan Password" required>
+                            <span class="toggle-password" id="togglePassword">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                    </div>    
+                    <button type="submit" class="btn-login">Masuk</button>
+                </form>
+                <div class="login-footer">
+                    <button id="lupaPasswordBtn" class="link-btn">Lupa Password?</button>
+                    <button id="daftarBtn" class="link-btn">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+
+    <!--Lupa Password-->
+    <div id="modalLupa" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Masukkan email anda, kami akan kirimkan petunjuk reset password.</p>
+            <input type="email" id="resetEmail" placeholder="Email">
+            <button id="sendResetBtn" class="btn-modal">Kirim</button>
+        </div>
+    </div>
+
+    <!--Daftar--> 
+    <div id="modalDaftar" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Pendaftaran Akun Baru</h3>
+            <p>Hubungi admin UT untuk pendaftaran resmi.</p>
+            <input type="text" placeholder="Nama" id="daftarNama">
+            <input type="email" placeholder="Email" id="daftarEmail">
+            <input type="password" placeholder="Password" id="daftarPass">
+            <button id="registerBtn" class="btn-modal">Daftar</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = togglePassword.querySelector('i');
+
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            if (type === 'password') {
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+    </script>
+
+</body>
+</html>
